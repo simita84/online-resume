@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <!-- This tells the browser how to read the document. -->
+  <meta charset="utf-8">
+
+  <!-- Tells the browser what the title of this page should be. -->
+  <title>Simi_Resume</title>
+
+  <!-- Load the page styles. -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="style.css" rel="stylesheet"> 
+  <script type="text/javascript" src="https://code.angularjs.org/1.4.0-rc.2/angular.min.js"></script>
+  <script src="jQuery.js"></script>
+
+  <meta name="viewport" content="width=device-width">
+</head>
+<body ngApp>
+
+ <div ng-controller="mainController" id="main">
+
+    <div class="row">
+        <div class="jumbotron">
+         <div class="row" id="header">
+          <div class="col-md-6">
+             <h1 class="page-header">{{name}}</h1>
+             <h4>{{role}}</h4>
+          </div>
+          
+         </div> 
+         
+          <div class="row">
+            <div class="col-md-2">
+                <img src="simi.jpg" id="avatar">
+            </div>
+            <div class="col-md-4" id="contact_list">
+              <h4><span class="glyphicon glyphicon-envelope"> {{contacts.email}}</span></h4>
+              <h4><span class="glyphicon glyphicon-phone"> {{contacts.cell}}</span></h4>
+              <h4><span class="glyphicon glyphicon-home"> {{contacts.location}}</span></h4>
+              <h4 class="contact_icon">
+                <a ng-href="http://{{contacts.website}}"><img src="website.png"></a>
+                <a ng-href="{{contacts.linkedIn}}"><img src="linkedin.jpeg"></a>
+                <a ng-href="{{contacts.github}}"><img src="github.png"></a>
+              </h4>
+           </div>
+           <div class="col-md-2 col-md-offset-1">
+             <a href="simi_tresa_antony_resume.pdf"><img src="resume.jpg" id="resume"></a>
+           </div>
+          </div>
+
+       </div> <!--jumbotron-->
+      <div class="break">
+        
+      </div>
+      <div class="row">
+        <h2>Skills at a glance</h2>
+        <div class="col-md-8">
+          <table class="table table-hover table-bordered">
+            <tr ng-repeat="(key, value) in skills">
+                <th> {{key}} </th>
+                <td> {{value}} </td>
+            </tr>
+        </table>
+        </div>
+      </div>
+    
+    </div>
+    
+    <div class="break">
+          
+    </div>
+
+
+    <div class="row" id="workExperience">
+      <h2>Work Experience</h2>
+      <div ng-repeat="work in work.experience">
+        <h4>{{work.Employer}}</h4>
+        <h5>{{work.Dates}}</h5>
+        <ul>
+          <li>Role : {{work.Role}}</li>
+          <li>Technology/tool/platform  : {{work.Technology}}</li>
+        </ul>
+      </div>
+      
+    </div>
+    <div class="break">
+          
+    </div>
+
+    <div class="row">
+      <h2>Education</h2>
+      <div ng-repeat="study in education.schools">
+        <h4>{{study.Institution}}</h4>
+        <h5>{{study.Year}}</h5>
+        <ul>
+          <li>Degree:{{study.Degree}}</li>
+          <li>Major:{{study.Major}}</li>
+          <li>Course GPA : {{study.GPA}}</li>
+          <li>Course highlights:{{study.Course_Highlights}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="break">
+          
+    </div>
+ 
+     <div class="row" id="projects">
+      <h2>Hobby Projects</h2>
+      <div ng-repeat="project in projects.projects">
+         <h5>{{project.name}}</h5>
+         <ul>
+           <li>
+            Site: <a ng-href="http://{{project.url}}">{{project.url}}</a>
+           </li>
+           <li ng-show="{{project.github}}">
+            Code: <a href="{{project.github}}">{{project.github}}</a>
+           </li>
+         </ul>
+      </div>
+    </div>
+
+   
+
+    </div><!--mainController-->
+    
+
+<footer> @Copyright Simi Tresa Antony </footer>
+ 
+
+  
+  <script src="resumeBuilder.js"></script>
+
+ 
+ 
+</body>
+</html>

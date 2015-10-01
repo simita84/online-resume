@@ -1,0 +1,93 @@
+ 
+ body{
+   padding: 60px;
+   background: #2F4F4F;
+   color: #00CED1;
+ }
+  
+ .jumbotron{
+  height: auto;
+  border-radius: 20px;
+  color: black;
+ } 
+  
+ a{
+  text-decoration: none;
+ }
+ #topContacts li{
+  display: inline-block;
+  list-style: none;
+  margin: 3px;
+ }
+#avatar img{
+  border-radius: 10px; 
+  
+}
+table{
+   border-radius: 10px; 
+}
+h1 {
+  font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+}
+h3 {
+  font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15.4px;
+}
+p {
+  font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+#avatar{
+  border-radius: 10px;
+  margin: 10px;
+}
+.break{
+  border-bottom: 3px solid white;
+}
+.row {
+  padding: 20px;
+}
+.contact_icon img{
+  width: 40px;
+  height:35px;
+  border-radius: 50px;
+}  
+.contact_icon{
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 18px;
+}  
+footer{
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  background: white;
+}
+#contact_list{
+  margin-left: 10px;
+}
+#resume{
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+ 
+
+ 
